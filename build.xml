@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="wsslider" default="site" basedir=".">
+    <!-- Do initialization stuff -->
+    <target name="prepare" >
+        <property file="build.properties"  override="true"/>
+    </target>
+
+    <property name="src" value="./" />
+
+    <target name="site" description="Copies files to a existing joomla site" depends="prepare">
+        <echo message="Copying Modules..." />
+
+        <!-- Media -->
+        <copy todir="${www.dir}/media" overwrite="true">
+            <fileset dir="${src}/media">
+                <include name="**" />
+            </fileset>
+        </copy>
+
+        <!-- Modules - Site -->
+        <copy todir="${www.dir}/modules/mod_wsslider" overwrite="true">
+            <fileset dir="${src}/">
+                <include name="**" />
+            </fileset>
+        </copy>
+    </target>
+
+</project>

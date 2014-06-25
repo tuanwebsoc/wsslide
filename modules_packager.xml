@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="modules packager" basedir="." default="main">
+
+    <!-- Do initialization stuff -->
+    <property file="build.properties" override="true"/>
+
+    <!-- Folder where the wsslider repository modules are located  -->
+    <property
+            name="extpath"
+            value="${repo.dir}/"
+            override="true" />
+
+    <!-- Target dir where module packages will be created  -->
+    <property
+            name="targetdir"
+            value="${package.dir}/pakage"
+            override="true" />
+
+    <!-- Version of the wsslider for witch the module is intended to  -->
+    <property
+	    name="version"
+	    value="${comp.version}"
+	    override="true" 
+    />
+
+    <!-- Version of the wsslider for witch the module is intended to  -->
+    <property
+            name="joomla_version"
+            value="25"
+            override="true" />
+
+    <!-- MAIN -->
+    <target name="main" description="Loops through folders creating module packages">
+
+        <!-- Cleanup build area -->
+        <delete dir="${targetdir}" />
+        <mkdir dir="${targetdir}" />
+
+    	<mkdir dir="${targetdir}/${comp.name}" />
+
+        <zip destfile="${targetdir}/${comp.name}_${version}_${joomla_version}j.zip"
+        	 basedir="${extpath}/">
+            <fileset dir="${extpath}/">
+                <include name="**" />
+                <exclude name=".*" />
+            </fileset>
+        </zip>
+    </target>
+
+
+</project>
