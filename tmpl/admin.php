@@ -5,11 +5,13 @@
 JHtml::_('jquery.ui');
 JHtml::_('jquery.ui', array('core', 'sortable'));
 $doc = JFactory::getdocument();
-// Add script js and css grid
+
+// Add Css script
+$doc->addStyleSheet(JURI::root() . "media/mod_wsslider/css/wsslider.css");
 
 ?>
 <div class="ws-container">
-	<div class="bs-example">
+	<div class="ws-buttons">
 	    <button data-action="addnew" type="button" class="btn btn-default">Add</button>
 	    <button type="button" class="btn btn-primary">Delete</button>
 	    <button type="button" class="btn btn-success">Success</button>
@@ -30,20 +32,10 @@ $doc = JFactory::getdocument();
 		</ul>
 	</div>
 </div>
-<style>
-  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
-  #sortable li span { position: absolute; margin-left: -1.3em; }
-  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
-  	border: 1px solid #d3d3d3;
-	background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
-	font-weight: normal;
-	color: #555555;
-  }
-</style>
+
 <script>
   jQuery(document).ready(function($) {
-    $( "#sortable" ).sortable();
-    $( "#sortable" ).disableSelection();
+    $( "#ws-wrapparam" ).sortable();
+    $( "#ws-wrapparam" ).disableSelection();
   });
 </script>

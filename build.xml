@@ -24,6 +24,13 @@
                 <include name="**" />
             </fileset>
         </copy>
+    	
+        <!-- Language - Site -->
+        <copy todir="${www.dir}/language" overwrite="true">
+            <fileset dir="${src}/language">
+                <include name="**" />
+            </fileset>
+        </copy>
     </target>
 
 </project>
