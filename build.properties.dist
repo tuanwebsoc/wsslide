@@ -1,0 +1,6 @@
+comp.name=wsslider
+www.dir=/var/www/j3
+comp.version=1.0
+joomla.version=3.3
+repo.dir=/home/tuan/git/wsslider
+package.dir=/home/tuan/git
