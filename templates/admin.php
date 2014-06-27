@@ -14,12 +14,12 @@ $doc = JFactory::getdocument();
 
 // Add Css script
 $doc->addStyleSheet(JURI::root() . "media/mod_wsslide/css/wsslide.css");
+$doc->addScript(JURI::root() . "media/mod_wsslide/js/wsslide.js");
 
 ?>
 <div class="ws-container">
 	<div class="ws-buttons">
-	    <button data-action="addnew" type="button" class="btn btn-default" onclick="">Add</button>
-	    <button type="button" class="btn btn-primary">Delete</button>
+	    <button data-action="addnew" type="button" class="btn btn-default" onclick="wsslide.addItem(this, '#ws-wrapparam')">Add</button>
 	    <button type="button" class="btn btn-success">Success</button>
 	    <button type="button" class="btn btn-info">Info</button>
 	    <button type="button" class="btn btn-warning">Warning</button>
@@ -29,12 +29,6 @@ $doc->addStyleSheet(JURI::root() . "media/mod_wsslide/css/wsslide.css");
 	<div class="ws-wrap">
 		<ul id="ws-wrapparam">
 		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
-		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
-		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
-		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
-		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
-		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
-		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
 		</ul>
 	</div>
 </div>

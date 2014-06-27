@@ -17,7 +17,6 @@ $doc->addScript(JUri::root() . "/modules/mod_wsslide/assets/angular.min.js");
 <div ng-app = "firstapp">
 	<div ng-controller='ngAppDemoController'>
 		<input ng-model='greeting.text' ng-change="change()">
-		<p>{{greeting.text}}, World</p>
 	</div>
 </div>
 

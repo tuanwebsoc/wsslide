@@ -14,8 +14,22 @@ wsslide.extend({
 	init : {
 		
 	},
-	add : function(){
+	addItem : function(e, strElement){
+		var datas = {
+				method : "getTemplate",
+				option : "com_ajax",
+				module : "wsslide",
+				format : "json"
+			}
 		
+		wsslide.jQuery.ajax({
+			  type: "POST",
+			  url: "index.php",
+			  data: datas,
+			  success: function(response){
+				 console.log(response);
+			  }
+		});
 	},
 	remove : function(){
 		

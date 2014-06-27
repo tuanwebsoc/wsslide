@@ -17,6 +17,7 @@
 		<folder>libraries</folder>
 		<filename>index.html</filename>
 		<filename>mod_wsslide.php</filename>
+		<filename>helper.php</filename>
 		<filename>mod_wsslide.xml</filename>
 	</files>
 	

@@ -19,7 +19,7 @@
         </copy>
 
         <!-- Modules - Site -->
-        <copy todir="${www.dir}/modules/mod_wsslider" overwrite="true">
+        <copy todir="${www.dir}/modules/mod_wsslide" overwrite="true">
             <fileset dir="${src}/">
                 <include name="**" />
             </fileset>
