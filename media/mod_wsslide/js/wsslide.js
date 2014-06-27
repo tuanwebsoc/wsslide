@@ -19,7 +19,8 @@ wsslide.extend({
 				method : "getTemplate",
 				option : "com_ajax",
 				module : "wsslide",
-				format : "json"
+				format : "json",
+				Itemid : "103"
 			}
 		
 		wsslide.jQuery.ajax({
