@@ -19,11 +19,9 @@ class WTemplate
 	 *
 	 * @param $file string the template file name
 	 */
-	public function fetch($file=null, $path = "tmpl")
+	public function fetch($file=null, $path = "/modules/mod_wsslider/templates")
 	{
-		$tmpFile	= $file;
-
-		$defaultPath = JPATH_ROOT . "/modules/mod_wsslider/" . $path . "/";
+		$defaultPath = JPATH_ROOT . $path . "/";
 
 		$file = $defaultPath . $file;
 
@@ -36,7 +34,7 @@ class WTemplate
 		if(!JFile::exists($file))
 		{
 			$mainframe	= JFactory::getApplication();
-			$mainframe->enqueueMessage( JText::sprintf('MOD__TEMPLATE_FILE_NOT_FOUND' , $tmpFile . '.php' ) , 'error' );
+			$mainframe->enqueueMessage( JText::sprintf('MOD__TEMPLATE_FILE_NOT_FOUND' , $file . '.php' ) , 'error' );
 			return;
 		}
 
