@@ -1,9 +1,10 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  mod_articles_archive
+ * @subpackage  mod_wsslise
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @link     	http://template.websoc.vn
+ * @copyright   Copyright (C) 2014 Social Network Solutions Co.,Ltd. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 

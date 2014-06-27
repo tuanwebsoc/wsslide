@@ -1,8 +1,8 @@
-if (typeof(wsslider)=='undefined')
+if (typeof(wsslide)=='undefined')
 {
 	// We will recreate our redjs namespace
 	// with redjs.jQuery pointing to their jQuery.
-	wsslider = {
+	wsslide = {
 		jQuery: window.jQuery,
 		extend: function(obj){
 			this.jQuery.extend(this, obj);
@@ -10,7 +10,7 @@ if (typeof(wsslider)=='undefined')
 	}
 }
 
-wsslider.extend({
+wsslide.extend({
 	init : {
 		
 	},

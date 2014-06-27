@@ -1,18 +1,24 @@
 <?php
 /**
+ * @package     Joomla.Site
+ * @subpackage  mod_wsslise
  *
+ * @link     	http://template.websoc.vn
+ * @copyright   Copyright (C) 2014 Social Network Solutions Co.,Ltd. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
+
 JHtml::_('jquery.ui');
 JHtml::_('jquery.ui', array('core', 'sortable'));
 $doc = JFactory::getdocument();
 
 // Add Css script
-$doc->addStyleSheet(JURI::root() . "media/mod_wsslider/css/wsslider.css");
+$doc->addStyleSheet(JURI::root() . "media/mod_wsslide/css/wsslide.css");
 
 ?>
 <div class="ws-container">
 	<div class="ws-buttons">
-	    <button data-action="addnew" type="button" class="btn btn-default">Add</button>
+	    <button data-action="addnew" type="button" class="btn btn-default" onclick="">Add</button>
 	    <button type="button" class="btn btn-primary">Delete</button>
 	    <button type="button" class="btn btn-success">Success</button>
 	    <button type="button" class="btn btn-info">Info</button>

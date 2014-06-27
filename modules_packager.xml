@@ -5,7 +5,7 @@
     <!-- Do initialization stuff -->
     <property file="build.properties" override="true"/>
 
-    <!-- Folder where the wsslider repository modules are located  -->
+    <!-- Folder where the wsslide repository modules are located  -->
     <property
             name="extpath"
             value="${repo.dir}/"
@@ -17,14 +17,14 @@
             value="${package.dir}/pakage"
             override="true" />
 
-    <!-- Version of the wsslider for witch the module is intended to  -->
+    <!-- Version of the wsslide for witch the module is intended to  -->
     <property
 	    name="version"
 	    value="${comp.version}"
 	    override="true" 
     />
 
-    <!-- Version of the wsslider for witch the module is intended to  -->
+    <!-- Version of the wsslide for witch the module is intended to  -->
     <property
             name="joomla_version"
             value="25"

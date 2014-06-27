@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.1" client="site" method="upgrade">
-	<name>WS Slider</name>
+	<name>WS Slide</name>
 	<author>websoc project</author>
 	<creationDate>July 2014</creationDate>
 	<copyright>Copyright (C) 2014 - 2015 Open Source Matters. All rights reserved.</copyright>
@@ -8,21 +8,21 @@
 	<authorEmail>info@websoc.vn</authorEmail>
 	<authorUrl>www.joomla.org</authorUrl>
 	<version>3.0.0</version>
-	<description>MOD_WSSLIDER_FIELD_DESCRIPTION</description>
+	<description>MOD_WSSLIDE_FIELD_DESCRIPTION</description>
 	<files>
-		<filename module="mod_angular">mod_wsslider.php</filename>
+		<filename module="mod_wsslide">mod_wsslide.php</filename>
 		<folder>tmpl</folder>
 		<folder>admin</folder>
 		<folder>assets</folder>
 		<folder>libraries</folder>
 		<filename>index.html</filename>
-		<filename>mod_wsslider.xml</filename>
+		<filename>mod_wsslide.xml</filename>
 	</files>
 	
 	<config>
 		<fields name="params">
-			<fieldset name="basic" addfieldpath="/modules/mod_wsslider/fields" >
-				<field name="dataslide" type="wsslider" label="MOD_WSSLIDER_FIELD_LABEL"/>
+			<fieldset name="basic" addfieldpath="/modules/mod_wsslide/fields" >
+				<field name="dataslide" type="wsslide" label="MOD_WSSLIDER_FIELD_LABEL"/>
 			</fieldset>
 		</fields>
 	</config>
