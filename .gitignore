@@ -436,3 +436,6 @@
 /joomla.xml
 /*.txt
 build.properties
+.gitignore~
+.settings/*
+.buildpath
