@@ -33,7 +33,7 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic" addfieldpath="/modules/mod_wsslide/fields" >
-				<field name="dataslide" type="wsslide" label="MOD_WSSLIDER_FIELD_LABEL"/>
+				<field name="dataslide" type="wsslide" label="MOD_WSSLIDE_FIELD_LABEL"/>
 			</fieldset>
 		</fields>
 	</config>
