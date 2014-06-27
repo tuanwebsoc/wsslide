@@ -12,13 +12,24 @@
 	<files>
 		<filename module="mod_wsslide">mod_wsslide.php</filename>
 		<folder>tmpl</folder>
-		<folder>admin</folder>
-		<folder>assets</folder>
+		<folder>templates</folder>
+		<folder>fields</folder>
 		<folder>libraries</folder>
 		<filename>index.html</filename>
+		<filename>mod_wsslide.php</filename>
 		<filename>mod_wsslide.xml</filename>
 	</files>
 	
+	<media folder="media" destination="mod_wsslide">
+       <folder>css</folder>
+       <folder>js</folder>
+       <file>index.html</file>
+    </media>
+	
+	<languages folder="language">
+        <language tag="en-GB">en-GB.mod_wsslide.ini</language>
+	</languages>
+
 	<config>
 		<fields name="params">
 			<fieldset name="basic" addfieldpath="/modules/mod_wsslide/fields" >
