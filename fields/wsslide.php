@@ -22,9 +22,9 @@ class JFormFieldwsslide extends JFormField
     protected function getInput()
     {
     	// Get template
-    	$template = new WTemplate();
+    	$template = new WSTemplate();
 
-    	$html = $template->fetch("admin.php");
+    	$html = $template->fetch("admin");
 
         return $html;
     }

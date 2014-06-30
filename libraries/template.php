@@ -8,7 +8,7 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-class WTemplate
+class WSTemplate
 {
 	var $vars; // Holds all the template variables
 
@@ -32,12 +32,12 @@ class WTemplate
 	{
 		$defaultPath = JPATH_ROOT . $path . "/";
 
-		$file = $defaultPath . $file;
+		$file = $defaultPath . $file . ".php";
 
 		// Template variable: the rest.
 		if($this->vars)
 		{
-			extract($this->vars, EXTR_REFS);
+			extract($this->vars);
 		}
 
 		if(!JFile::exists($file))

@@ -15,20 +15,22 @@ wsslide.extend({
 		
 	},
 	addItem : function(e, strElement){
+		
+		// Count child element for Parent Element
+		var countChild 	 	= wsslide.jQuery(strElement).children(".row").length;
 		var datas = {
-				method : "getTemplate",
-				option : "com_ajax",
-				module : "wsslide",
-				format : "json",
-				Itemid : "103"
+				template : "getFullWidthSlider",
+				counts	 : countChild
 			}
+		
 		
 		wsslide.jQuery.ajax({
 			  type: "POST",
-			  url: "index.php",
+			  url: window.PATH_ROOT + "/modules/mod_wsslide/templates/corecontroller.php",
 			  data: datas,
-			  success: function(response){
-				 console.log(response);
+			  success: function(response)
+			  {
+				 wsslide.jQuery(strElement).append(response);
 			  }
 		});
 	},
