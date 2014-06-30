@@ -34,22 +34,12 @@ if (!defined('_JDEFINES'))
 
 require_once JPATH_BASE . '/includes/framework.php';
 require_once JPATH_BASE . '/modules/mod_wsslide/libraries/template.php';
+require_once JPATH_BASE . '/modules/mod_wsslide/helper.php';
 jimport('joomla.filesystem.file');
 
 $app = JFactory::getApplication("site");
 $input = $app->input;
 
-// Core get Template
-//$template = $input->get("template");
+$func = $input->get("func");
 
-// Get number child item
-$numbChilds = $input->get("counts");
-
-$template = new WSTemplate();
-
-echo $template->set("numbChilds", $numbChilds)
-			  ->fetch("itemparam");
-
-
-
-
+ModWsslideHelper::$func();

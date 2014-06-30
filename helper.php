@@ -25,8 +25,29 @@ class ModWsslideHelper
 	 *
 	 * @return  mixed
 	 */
-	public static function getTemplateAjax()
+	public static function getParamsTemplate()
 	{
-		return "asjkdhajkshd";
+		$app = JFactory::getApplication("site");
+		$input = $app->input;
+
+		$template = new WSTemplate();
+
+		$tmpl = $input->get("template");
+
+		echo $template->fetch($tmpl);
+	}
+
+	public static function getItemsTemplate()
+	{
+		$app = JFactory::getApplication("site");
+		$input = $app->input;
+
+		// Get number child item
+		$numbChilds = $input->get("counts");
+
+		$template = new WSTemplate();
+
+		echo $template->set("numbChilds", $numbChilds)
+			->fetch("itemparam");
 	}
 }

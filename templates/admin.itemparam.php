@@ -7,7 +7,6 @@
  * @copyright   Copyright (C) 2014 Social Network Solutions Co.,Ltd. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
-
 ?>
 <div class="ui-state-default row">
 	<div class="span4">

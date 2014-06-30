@@ -22,7 +22,8 @@ $doc = JFactory::getdocument();
 $doc->addStyleSheet(JURI::root() . "media/mod_wsslide/css/wsslide.css");
 $doc->addScript(JURI::root() . "media/mod_wsslide/js/wsslide.js");
 $doc->addScriptDeclaration("
-	window.PATH_ROOT = '" . JURI::root() . "';"
+		window.PATH_ROOT = '" . JURI::root() . "';
+		window.AJAX_LOCATION = '/modules/mod_wsslide/templates/admin.corecontroller.php'"
 );
 
 // Build the script.
@@ -82,24 +83,28 @@ JFactory::getDocument()->addScriptDeclaration(implode("\n", $script));
 		    <button type="button" class="btn btn-warning">Warning</button>
 		    <button type="button" class="btn btn-danger">Danger</button>
 		    <button type="button" class="btn btn-link">Link</button>
+		    <select name="jform[params][type]" onchange="wsslide.changeType(this, '#ws-configuration')">
+		    	<option value="none"><?php echo JText::_("MOD_WSSLIDE_LAYOUT_ADMIN_SELECT_TYPE"); ?></option>
+		    	<?php
+		    		$optionType = array(
+						"layout.fullwidthslider" =>"Full Width Slider",
+						"layout.imageslider" =>"Image Slider",
+						"layout.simplefadelayout" =>"Simple Fade Layout",
+						"layout.bannerslider" =>"Banner Slider",
+						"layout.imagegallery" =>"Image Gallery"
+					);
+		    	?>
+
+		    	<?php foreach ($optionType as $key => $label) : ?>
+		    		<option value="<?php echo $key; ?>"><?php echo $label; ?></option>
+		    	<?php endforeach; ?>
+		    </select>
 		</div>
 
 		<div class="ws-wrap row">
 			<div id="ws-wrapparam" class="span9">
 			</div>
-			<div id="ws-wrapparam" class="span3">
-				<div>
-					param 1
-				</div>
-				<div>
-					param 2
-				</div>
-				<div>
-					param 3
-				</div>
-				<div>
-					param 4
-				</div>
+			<div id="ws-configuration" class="span3">
 			</div>
 		</div>
 	</div>

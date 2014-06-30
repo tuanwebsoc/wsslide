@@ -19,18 +19,34 @@ wsslide.extend({
 		// Count child element for Parent Element
 		var countChild 	 	= wsslide.jQuery(strElement).children(".row").length;
 		var datas = {
-				template : "getFullWidthSlider",
+				template : "full",
+				func     : "getItemsTemplate",
 				counts	 : countChild
 			}
 		
-		
 		wsslide.jQuery.ajax({
 			  type: "POST",
-			  url: window.PATH_ROOT + "/modules/mod_wsslide/templates/corecontroller.php",
+			  url: window.PATH_ROOT + window.AJAX_LOCATION,
 			  data: datas,
 			  success: function(response)
 			  {
 				 wsslide.jQuery(strElement).append(response);
+			  }
+		});
+	},
+	changeType : function(e, strElement){
+		var datas = {
+				template : e.value,
+				func     : "getParamsTemplate"
+		}
+		
+		wsslide.jQuery.ajax({
+			  type: "POST",
+			  url: window.PATH_ROOT + window.AJAX_LOCATION,
+			  data: datas,
+			  success: function(response)
+			  {
+				 wsslide.jQuery(strElement).html(response);
 			  }
 		});
 	},
