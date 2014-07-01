@@ -24,9 +24,8 @@ class JFormFieldwsslide extends JFormField
     	// Get template
     	$template = new WSTemplate();
 
-    	$html = $template->fetch("admin");
-
-        return $html;
+    	return $template->set("data", $this->value)
+    					->fetch("admin");
     }
 }
 // EOF

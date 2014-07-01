@@ -50,8 +50,9 @@ wsslide.extend({
 			  }
 		});
 	},
-	remove : function(){
-		
+	remove : function(e){
+		// Find parent and removing it
+		wsslide.jQuery(e).parent().parent().remove();
 	},
 	edit : function(){
 		

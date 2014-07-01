@@ -74,6 +74,9 @@ $script[] = '	}';
 // Add the script to the document head.
 JFactory::getDocument()->addScriptDeclaration(implode("\n", $script));
 
+// Extract data $items and $type
+extract($data);
+
 ?>
 	<div class="ws-container">
 		<div class="ws-buttons">
@@ -83,7 +86,7 @@ JFactory::getDocument()->addScriptDeclaration(implode("\n", $script));
 		    <button type="button" class="btn btn-warning">Warning</button>
 		    <button type="button" class="btn btn-danger">Danger</button>
 		    <button type="button" class="btn btn-link">Link</button>
-		    <select name="jform[params][type]" onchange="wsslide.changeType(this, '#ws-configuration')">
+		    <select name="jform[params][dataslide][type][name]" onchange="wsslide.changeType(this, '#ws-configuration')">
 		    	<option value="none"><?php echo JText::_("MOD_WSSLIDE_LAYOUT_ADMIN_SELECT_TYPE"); ?></option>
 		    	<?php
 		    		$optionType = array(
@@ -96,15 +99,38 @@ JFactory::getDocument()->addScriptDeclaration(implode("\n", $script));
 		    	?>
 
 		    	<?php foreach ($optionType as $key => $label) : ?>
-		    		<option value="<?php echo $key; ?>"><?php echo $label; ?></option>
+		    		<?php
+		    			$checked = "";
+
+		    			if (!empty($type["name"]) && $key == $type["name"])
+		    			{
+		    				$checked = "selected='selected'";
+		    			}
+	    			?>
+		    		<option value="<?php echo $key; ?>" <?php if (!empty($checked)) echo $checked; ?>><?php echo $label; ?></option>
 		    	<?php endforeach; ?>
 		    </select>
 		</div>
 
+		<!-- Layout Item here -->
 		<div class="ws-wrap row">
-			<div id="ws-wrapparam" class="span9">
+			<div id="ws-wrapparam" class="span8">
+				<?php if (count($items) > 0) : ?>
+					<?php
+						$temp = new WSTemplate();
+						echo $temp->set("items", $items)
+								  ->fetch("admin.items");
+					?>
+				<?php endif;?>
 			</div>
-			<div id="ws-configuration" class="span3">
+			<div id="ws-configuration" class="span4">
+				<?php if (count($type) > 0 && $type["name"] != "none") : ?>
+					<?php
+						$temp = new WSTemplate();
+						echo $temp	->set("config", $type["config"])
+									->fetch($type["name"]);
+					?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

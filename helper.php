@@ -48,6 +48,6 @@ class ModWsslideHelper
 		$template = new WSTemplate();
 
 		echo $template->set("numbChilds", $numbChilds)
-			->fetch("itemparam");
+			->fetch("admin.itemparam");
 	}
 }
