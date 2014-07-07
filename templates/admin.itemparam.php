@@ -11,6 +11,7 @@ if (empty($item))
 {
 	$item = array();
 }
+
 ?>
 <?php if (count($item) > 0) : ?>
 <div class="ui-state-default row">
@@ -19,7 +20,7 @@ if (empty($item))
 				<i class="icon-remove"></i>
 		</a>
 	</div>
-	<div class="span4">
+	<div class="span5">
 		<div class="input-prepend input-append">
 			<div class="media-preview add-on">
 			<span class="hasTipPreview" title=""><i class="icon-eye"></i></span>
@@ -38,7 +39,7 @@ if (empty($item))
 			</a>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="span6">
 		<table class="table table-bordered">
 			<tr>
 				<th>Title</th>
@@ -58,7 +59,7 @@ if (empty($item))
 			<i class="icon-remove"></i>
 		</a>
 	</div>
-	<div class="span4">
+	<div class="span5">
 		<div class="input-prepend input-append">
 			<div class="media-preview add-on">
 			<span class="hasTipPreview" title=""><i class="icon-eye"></i></span>
@@ -77,8 +78,17 @@ if (empty($item))
 			</a>
 		</div>
 	</div>
-	<div class="span4">
-		Test
+	<div class="span6">
+		<table class="table table-bordered">
+			<tr>
+				<th>Title</th>
+				<th>Content</th>
+			</tr>
+			<tr>
+				<td><input></td>
+				<td>Content</td>
+			</tr>
+		</table>
 	</div>
 </div>
 <?php endif; ?>

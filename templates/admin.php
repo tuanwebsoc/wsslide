@@ -114,16 +114,18 @@ extract($data);
 
 		<!-- Layout Item here -->
 		<div class="ws-wrap row">
-			<div id="ws-wrapparam" class="span8">
+			<div id="ws-wrapparam" class="span7">
 				<?php if (count($items) > 0) : ?>
 					<?php
+						$registry = new JRegistry($items);
+						$items = $registry->toArray();
 						$temp = new WSTemplate();
 						echo $temp->set("items", $items)
 								  ->fetch("admin.items");
 					?>
 				<?php endif;?>
 			</div>
-			<div id="ws-configuration" class="span4">
+			<div id="ws-configuration" class="span5">
 				<?php if (count($type) > 0 && $type["name"] != "none") : ?>
 					<?php
 						$temp = new WSTemplate();

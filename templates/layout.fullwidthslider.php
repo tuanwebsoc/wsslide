@@ -16,8 +16,8 @@ if (empty($config))
 ?>
 <table class="table table-bordered">
 	<tr>
-		<th>Options</th>
-		<th>Parameter</th>
+		<th style="width: 20%">Options</th>
+		<th style="width: 40%">Parameter</th>
 	</tr>
 	<tr>
 		<td>$FillMode</td>

@@ -50,4 +50,10 @@ class ModWsslideHelper
 		echo $template->set("numbChilds", $numbChilds)
 			->fetch("admin.itemparam");
 	}
+	
+	public  static function getData()
+	{
+		
+	}
+	}
 }

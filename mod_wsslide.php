@@ -13,5 +13,9 @@ defined('_JEXEC') or die;
 // Include the syndicate functions only once
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+$data = $params->get("dataslide");
 
-require JModuleHelper::getLayoutPath('mod_angular', $params->get('layout', 'default'));
+echo "<pre>";
+	print_r($data);
+echo "</pre>";
+require JModuleHelper::getLayoutPath('mod_wsslide', $params->get('layout', 'default'));

@@ -21,19 +21,19 @@
 		<filename>mod_wsslide.xml</filename>
 	</files>
 	
-	<media folder="media" destination="mod_wsslide">
+	<media folder="media/mod_wsslide" destination="mod_wsslide">
        <folder>css</folder>
        <folder>js</folder>
        <file>index.html</file>
     </media>
 	
 	<languages folder="language">
-        <language tag="en-GB">en-GB.mod_wsslide.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_wsslide.ini</language>
 	</languages>
 
 	<config>
 		<fields name="params">
-			<fieldset name="basic" addfieldpath="/modules/mod_wsslide/fields" >
+			<fieldset name="advanced" addfieldpath="/modules/mod_wsslide/fields" >
 				<field name="dataslide" type="wsslide" label="MOD_WSSLIDE_FIELD_LABEL"/>
 			</fieldset>
 		</fields>
